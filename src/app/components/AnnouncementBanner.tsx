@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MessageSquare, Volume2 } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 interface AnnouncementBannerProps {
   lang: "en" | "hi";
@@ -17,12 +17,6 @@ export default function AnnouncementBanner({ lang }: AnnouncementBannerProps) {
 
   return (
     <div className="bg-[#E81D25] text-white h-11 flex items-center justify-between px-4 overflow-hidden border-b border-white/10 select-none relative z-50">
-      
-      {/* Live Badge indicator */}
-      <div className="flex items-center gap-1.5 bg-black/25 backdrop-blur-sm border border-white/15 px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-widest mr-4 shrink-0 shadow-inner">
-        <Volume2 className="h-3.5 w-3.5 animate-pulse text-white" />
-        <span>Live</span>
-      </div>
 
       {/* Ticker marquee container */}
       <div className="flex-1 overflow-hidden relative flex items-center h-full">
