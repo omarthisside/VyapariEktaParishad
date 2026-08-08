@@ -15,6 +15,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ArticleView from "./components/ArticleView";
 import AnnouncementBanner from "./components/AnnouncementBanner";
+import PromoModal from "./components/PromoModal";
 import { translations } from "./data/translations";
 
 export default function Home() {
@@ -115,6 +116,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#ECE9DE]">
+      {/* Promotional Modal Popup */}
+      <PromoModal lang={lang} />
+
       {/* Animated Announcement Banner */}
       <AnnouncementBanner lang={lang} />
 
