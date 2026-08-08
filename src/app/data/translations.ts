@@ -257,7 +257,7 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
         mandal: {
           title: "Divisional Committee (Mandal Team)",
           members: [
-            { name: "Mohd Kashif", role: "Mandal In-charge", desc: "", image: "/members/mohd-kashif.png" },
+            { name: "Er. Mohd Kashif", role: "Mandal In-charge", desc: "", image: "/members/mohd-kashif.png" },
             { name: "Mohd Pasha", role: "Mandal President", desc: "" },
             { name: "Azhar Bukhari", role: "Mandal Vice President", desc: "" },
             { name: "Ragib Farooqui", role: "Mandal Vice President", desc: "" }
@@ -489,7 +489,7 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
         mandal: {
           title: "मंडल कार्यकारिणी (Mandal Team)",
           members: [
-            { name: "मोहम्मद काशिफ", role: "मंडल प्रभारी", desc: "", image: "/members/mohd-kashif.png" },
+            { name: "इंजी. मोहम्मद काशिफ", role: "मंडल प्रभारी", desc: "", image: "/members/mohd-kashif.png" },
             { name: "मोहम्मद पाशा", role: "मंडल अध्यक्ष", desc: "" },
             { name: "अजहर बुखारी", role: "मंडल उपाध्यक्ष", desc: "" },
             { name: "रागिब फारूकी", role: "मंडल उपाध्यक्ष", desc: "" }
