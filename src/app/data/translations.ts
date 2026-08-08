@@ -74,11 +74,14 @@ export interface TranslationContent {
   activities: {
     heading: string;
     readMore: string;
+    backBtn: string;
+    shareBtn: string;
     cards: Array<{
       date: string;
       category: string;
       title: string;
       desc: string;
+      content: string;
     }>;
   };
   joinSection: {
@@ -294,24 +297,29 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
     activities: {
       heading: "Latest Activities & Updates",
       readMore: "Read More",
+      backBtn: "Back to Home",
+      shareBtn: "Share on WhatsApp",
       cards: [
         {
           date: "October 12, 2026",
           category: "MEETING",
           title: "State Level Traders Convention in Lucknow",
-          desc: "Discussing key policy resolutions regarding local market GST compliances and trader security schemes with state leaders."
+          desc: "Discussing key policy resolutions regarding local market GST compliances and trader security schemes with state leaders.",
+          content: "The State Level Traders Convention was held in Lucknow under the leadership of State President & Founder Shri Rahul Verma Ji. The convention was attended by over 500 trader representatives from various districts of Uttar Pradesh.\n\nKey discussions revolved around simplifying GST filing procedures for small and micro businesses, raising the limit for input tax credit issues, and creating a more secure business environment for local market areas. Shri Rahul Verma Ji emphasized that traders are the backbone of the economy and their concerns must be prioritized. A unanimous resolution was passed to submit a detailed charter of demands to the state leadership for immediate action."
         },
         {
           date: "September 28, 2026",
           category: "NEWS",
           title: "Rahul Verma Ji Raises Market Parking Challenges",
-          desc: "VEP submits memorandum to administration regarding critical parking layouts in major commercial zones."
+          desc: "VEP submits memorandum to administration regarding critical parking layouts in major commercial zones.",
+          content: "State President Shri Rahul Verma Ji held a crucial meeting with the local administrative authorities to discuss the severe parking challenges faced by both traders and customers in major commercial markets.\n\nDuring the meeting, a comprehensive memorandum was submitted detailing the issues caused by inadequate parking structures, including traffic congestion, loss of business for local shops, and safety hazards for pedestrians. Shri Rahul Verma Ji urged the authorities to mark dedicated loading and unloading zones for commercial vehicles and develop vacant municipal plots into organized smart parking facilities. The administration assured VEP of immediate surveys and collaborative planning."
         },
         {
           date: "August 15, 2026",
           category: "AWARENESS",
           title: "Digital Payment Security & Cyber Safety Workshop",
-          desc: "Helping local shopkeepers secure their mobile payment gateways against digital fraudulent traps."
+          desc: "Helping local shopkeepers secure their mobile payment gateways against digital fraudulent traps.",
+          content: "A specialized workshop on 'Digital Payment Security & Cyber Safety' was organized by Vyapari Ekta Parishad to educate local shopkeepers and retail merchants about securing their online financial transactions.\n\nExperts from cybersecurity agencies conducted live demonstrations on preventing UPI spoofing, identifying phishing links, and securing digital merchant wallets. Over 300 retail merchants attended the seminar. Shri Rahul Verma Ji highlighted that as business moves digital, safeguarding hard-earned money from cyber fraudsters is a key pillar of trader protection. VEP announced that a dedicated helpline desk will be set up to assist merchants with cyber fraud grievance reporting."
         }
       ]
     },
@@ -524,26 +532,31 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
       }
     },
     activities: {
-      heading: "गतिविधियां एवं अपडेट",
-      readMore: "अधिक पढ़ें",
+      heading: "नवीनतम गतिविधियां एवं अपडेट",
+      readMore: "और पढ़ें",
+      backBtn: "मुख्य पृष्ठ पर वापस जाएं",
+      shareBtn: "व्हाट्सएप पर साझा करें",
       cards: [
         {
           date: "12 अक्टूबर, 2026",
           category: "बैठक",
           title: "लखनऊ में राज्य स्तरीय व्यापारी सम्मेलन",
-          desc: "राज्य के नेताओं के साथ स्थानीय बाजार जीएसटी अनुपालन और व्यापारी सुरक्षा योजनाओं के संबंध में प्रमुख नीतिगत प्रस्तावों पर चर्चा।"
+          desc: "राज्य के नेताओं के साथ स्थानीय बाजार जीएसटी अनुपालन और व्यापारी सुरक्षा योजनाओं के संबंध में प्रमुख नीतिगत प्रस्तावों पर चर्चा।",
+          content: "प्रदेश अध्यक्ष एवं संस्थापक श्री राहुल वर्मा जी के नेतृत्व में लखनऊ में राज्य स्तरीय व्यापारी सम्मेलन का आयोजन किया गया। इस सम्मेलन में उत्तर प्रदेश के विभिन्न जिलों से 500 से अधिक व्यापारी प्रतिनिधियों ने भाग लिया।\n\nमुख्य चर्चा लघु और सूक्ष्म व्यवसायों के लिए जीएसटी फाइलिंग प्रक्रियाओं को सरल बनाने, इनपुट टैक्स क्रेडिट के मुद्दों की सीमा बढ़ाने और स्थानीय बाजार क्षेत्रों के लिए अधिक सुरक्षित व्यावसायिक वातावरण बनाने के इर्द-गिर्द घूमती रही। श्री राहुल वर्मा जी ने जोर देकर कहा कि व्यापारी अर्थव्यवस्था की रीढ़ हैं और उनकी चिंताओं को प्राथमिकता दी जानी चाहिए। तत्काल कार्रवाई के लिए राज्य नेतृत्व को मांगों का एक विस्तृत चार्टर सौंपने का एक सर्वसम्मत प्रस्ताव पारित किया गया।"
         },
         {
           date: "28 सितंबर, 2026",
           category: "समाचार",
           title: "राहुल वर्मा जी ने उठाई बाजार में पार्किंग की चुनौतियाँ",
-          desc: "वी.ई.पी. ने प्रमुख व्यावसायिक क्षेत्रों में महत्वपूर्ण पार्किंग लेआउट के संबंध में प्रशासन को ज्ञापन सौंपा।"
+          desc: "वी.ई.पी. ने प्रमुख व्यावसायिक क्षेत्रों में महत्वपूर्ण पार्किंग लेआउट के संबंध में प्रशासन को ज्ञापन सौंपा।",
+          content: "प्रदेश अध्यक्ष श्री राहुल वर्मा जी ने प्रमुख व्यावसायिक बाजारों में व्यापारियों और ग्राहकों दोनों के सामने आने वाली गंभीर पार्किंग चुनौतियों पर चर्चा करने के लिए स्थानीय प्रशासनिक अधिकारियों के साथ एक महत्वपूर्ण बैठक की।\n\nबैठक के दौरान, अपर्याप्त पार्किंग संरचनाओं के कारण होने वाली समस्याओं का विवरण देने वाला एक व्यापक ज्ञापन सौंपा गया, जिसमें यातायात की भीड़, स्थानीय दुकानों के लिए व्यवसाय का नुकसान और पैदल चलने वालों के लिए सुरक्षा खतरे शामिल थे। श्री राहुल वर्मा जी ने अधिकारियों से व्यावसायिक वाहनों के लिए समर्पित लोडिंग और अनलोडिंग जोन चिह्नित करने और खाली पड़े नगर पालिका भूखंडों को संगठित स्मार्ट पार्किंग सुविधाओं में विकसित करने का आग्रह किया। प्रशासन ने वी.ई.पी. को तत्काल सर्वेक्षण और सहयोगी योजना का आश्वासन दिया।"
         },
         {
           date: "15 अगस्त, 2026",
           category: "जागरूकता",
           title: "डिजिटल भुगतान सुरक्षा और साइबर सुरक्षा कार्यशाला",
-          desc: "स्थानीय दुकानदारों को डिजिटल धोखाधड़ी के जाल से अपने मोबाइल भुगतान गेटवे को सुरक्षित करने में मदद करना।"
+          desc: "स्थानीय दुकानदारों को डिजिटल धोखाधड़ी के जाल से अपने मोबाइल भुगतान गेटवे को सुरक्षित करने में मदद करना।",
+          content: "व्यापारी एकता परिषद द्वारा स्थानीय दुकानदारों और खुदरा व्यापारियों को उनके ऑनलाइन वित्तीय लेनदेन को सुरक्षित करने के बारे में शिक्षित करने के लिए 'डिजिटल भुगतान सुरक्षा और साइबर सुरक्षा' पर एक विशेष कार्यशाला का आयोजन किया गया।\n\nसाइबर सुरक्षा विशेषज्ञों ने यूपीआई स्पूफिंग को रोकने, फ़िशिंग लिंक की पहचान करने और डिजिटल मर्चेंट वॉलेट को सुरक्षित करने पर लाइव प्रदर्शन किया। कार्यशाला में 300 से अधिक खुदरा व्यापारियों ने भाग लिया। श्री राहुल वर्मा जी ने रेखांकित किया कि जैसे-जैसे व्यवसाय डिजिटल हो रहा है, साइबर धोखेबाजों से अपनी मेहनत की कमाई की रक्षा करना व्यापारी सुरक्षा का एक प्रमुख स्तंभ है। वी.ई.पी. ने घोषणा की कि साइबर धोखाधड़ी की शिकायत दर्ज कराने में व्यापारियों की सहायता के लिए एक समर्पित हेल्पलाइन डेस्क स्थापित किया जाएगा।"
         }
       ]
     },

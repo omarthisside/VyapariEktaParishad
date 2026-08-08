@@ -13,11 +13,13 @@ import Gallery from "./components/Gallery";
 import JoinUs from "./components/JoinUs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ArticleView from "./components/ArticleView";
 import { translations } from "./data/translations";
 
 export default function Home() {
   const [lang, setLangState] = useState<"en" | "hi">("hi");
   const [mounted, setMounted] = useState(false);
+  const [activeArticle, setActiveArticle] = useState<any>(null);
 
   const contactRef = useRef<HTMLDivElement>(null);
 
@@ -80,6 +82,35 @@ export default function Home() {
 
   const currentText = translations[lang];
 
+  if (activeArticle) {
+    return (
+      <div className="flex flex-col min-h-screen bg-[#ECE9DE]">
+        {/* Sticky Navigation Header */}
+        <Header
+          lang={lang}
+          setLang={setLang}
+          onJoinClick={handleJoinClick}
+          labels={currentText.nav}
+        />
+        
+        {/* Article Page View */}
+        <ArticleView
+          article={activeArticle}
+          onClose={() => {
+            setActiveArticle(null);
+            setTimeout(() => {
+              document.getElementById("activities")?.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+          }}
+          labels={currentText.activities}
+        />
+        
+        {/* Footer Sitemap */}
+        <Footer labels={currentText.nav} />
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-[#ECE9DE]">
       {/* Sticky Navigation Header */}
@@ -113,7 +144,7 @@ export default function Home() {
       <Leadership labels={currentText.leadership} />
 
       {/* Activities / Updates Cards */}
-      <Activities labels={currentText.activities} />
+      <Activities onCardClick={setActiveArticle} labels={currentText.activities} />
 
       {/* Gallery Section */}
       <Gallery labels={currentText.gallery} />

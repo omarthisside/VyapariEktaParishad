@@ -8,17 +8,21 @@ interface ActivityCard {
   category: string;
   title: string;
   desc: string;
+  content: string;
 }
 
 interface ActivitiesProps {
+  onCardClick: (card: ActivityCard) => void;
   labels: {
     heading: string;
     readMore: string;
+    backBtn: string;
+    shareBtn: string;
     cards: ActivityCard[];
   };
 }
 
-export default function Activities({ labels }: ActivitiesProps) {
+export default function Activities({ onCardClick, labels }: ActivitiesProps) {
   // Styled SVGs to act as card visual backgrounds based on categories
   const renderCardGraphic = (category: string) => {
     const isMeeting = category === "MEETING" || category === "बैठक";
@@ -59,7 +63,8 @@ export default function Activities({ labels }: ActivitiesProps) {
           {labels.cards.map((card, index) => (
             <article
               key={index}
-              className="bg-white border border-[#8B312B]/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col"
+              onClick={() => onCardClick(card)}
+              className="bg-white border border-[#8B312B]/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col cursor-pointer group"
             >
               {/* Graphic Banner */}
               {renderCardGraphic(card.category)}
@@ -86,7 +91,7 @@ export default function Activities({ labels }: ActivitiesProps) {
 
                 {/* Read More button */}
                 <div className="pt-5 border-t border-[#8B312B]/5 mt-5 flex items-center">
-                  <span className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-wider text-[#E81D25] hover:text-[#8B312B] transition-colors">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-wider text-[#E81D25] group-hover:text-[#8B312B] transition-colors">
                     {labels.readMore}
                     <ArrowRight className="h-3.5 w-3.5" />
                   </span>
