@@ -14,6 +14,7 @@ import JoinUs from "./components/JoinUs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ArticleView from "./components/ArticleView";
+import AnnouncementBanner from "./components/AnnouncementBanner";
 import { translations } from "./data/translations";
 
 export default function Home() {
@@ -85,6 +86,9 @@ export default function Home() {
   if (activeArticle) {
     return (
       <div className="flex flex-col min-h-screen bg-[#ECE9DE]">
+        {/* Animated Announcement Banner */}
+        <AnnouncementBanner lang={lang} />
+
         {/* Sticky Navigation Header */}
         <Header
           lang={lang}
@@ -113,6 +117,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#ECE9DE]">
+      {/* Animated Announcement Banner */}
+      <AnnouncementBanner lang={lang} />
+
       {/* Sticky Navigation Header */}
       <Header
         lang={lang}
