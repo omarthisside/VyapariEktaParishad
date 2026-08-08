@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { Calendar, Tag, ArrowLeft, MessageCircle } from "lucide-react";
 
 interface Article {
@@ -9,6 +10,7 @@ interface Article {
   title: string;
   desc: string;
   content: string;
+  image?: string;
 }
 
 interface ArticleViewProps {
@@ -61,7 +63,17 @@ export default function ArticleView({ article, onClose, labels }: ArticleViewPro
         </div>
 
         {/* Article Container */}
-        <article className="bg-white border border-[#8B312B]/10 rounded-3xl p-8 md:p-12 shadow-sm space-y-6">
+        <article className="bg-white border border-[#8B312B]/10 rounded-3xl p-8 md:p-12 shadow-sm space-y-6 overflow-hidden">
+          {article.image && (
+            <div className="w-full h-64 md:h-80 relative rounded-2xl overflow-hidden mb-6 border border-[#8B312B]/10">
+              <Image
+                src={article.image}
+                alt={article.title}
+                fill
+                className="object-cover animate-fade-in"
+              />
+            </div>
+          )}
           {/* Metadata Row */}
           <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-500">
             <span className="bg-[#E81D25]/10 text-[#E81D25] border border-[#E81D25]/10 px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-widest flex items-center gap-1">

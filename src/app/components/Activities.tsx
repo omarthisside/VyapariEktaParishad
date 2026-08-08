@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Calendar, Tag, ArrowRight, FileText } from "lucide-react";
 
 interface ActivityCard {
@@ -9,6 +10,7 @@ interface ActivityCard {
   title: string;
   desc: string;
   content: string;
+  image?: string;
 }
 
 interface ActivitiesProps {
@@ -24,9 +26,27 @@ interface ActivitiesProps {
 
 export default function Activities({ onCardClick, labels }: ActivitiesProps) {
   // Styled SVGs to act as card visual backgrounds based on categories
-  const renderCardGraphic = (category: string) => {
-    const isMeeting = category === "MEETING" || category === "बैठक";
-    const isNews = category === "NEWS" || category === "समाचार";
+  const renderCardGraphic = (card: ActivityCard) => {
+    if (card.image) {
+      return (
+        <div className="h-44 w-full relative overflow-hidden border-b border-[#8B312B]/10 select-none">
+          <Image
+            src={card.image}
+            alt={card.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          {/* Decorative dynamic badge */}
+          <div className="absolute bottom-3 left-4 bg-white/80 backdrop-blur-sm border border-[#8B312B]/10 px-2.5 py-1 rounded text-[10px] font-black uppercase tracking-wider text-[#1F1D1C] flex items-center gap-1.5 shadow-sm">
+            <Tag className="h-3 w-3 text-[#E81D25]" />
+            <span>{card.category}</span>
+          </div>
+        </div>
+      );
+    }
+
+    const isMeeting = card.category === "MEETING" || card.category === "बैठक";
+    const isNews = card.category === "NEWS" || card.category === "समाचार";
 
     return (
       <div className="h-44 w-full relative overflow-hidden bg-[#ECE9DE]/60 border-b border-[#8B312B]/10 flex items-center justify-center select-none">
@@ -41,7 +61,7 @@ export default function Activities({ onCardClick, labels }: ActivitiesProps) {
         {/* Decorative dynamic badge */}
         <div className="absolute bottom-3 left-4 bg-white/80 backdrop-blur-sm border border-[#8B312B]/10 px-2.5 py-1 rounded text-[10px] font-black uppercase tracking-wider text-[#1F1D1C] flex items-center gap-1.5 shadow-sm">
           <Tag className="h-3 w-3 text-[#E81D25]" />
-          <span>{category}</span>
+          <span>{card.category}</span>
         </div>
       </div>
     );
@@ -67,7 +87,7 @@ export default function Activities({ onCardClick, labels }: ActivitiesProps) {
               className="bg-white border border-[#8B312B]/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col cursor-pointer group"
             >
               {/* Graphic Banner */}
-              {renderCardGraphic(card.category)}
+              {renderCardGraphic(card)}
 
               {/* Text Area */}
               <div className="p-6 flex flex-col justify-between flex-1">
