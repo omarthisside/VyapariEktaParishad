@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ECE9DE;
+  --foreground: #1F1D1C;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-brand-red: #E81D25;
+  --color-brand-maroon: #8B312B;
+  --color-brand-cream: #ECE9DE;
+  --color-brand-charcoal: #1F1D1C;
+  --color-brand-navy: #251F65;
+  --color-brand-white: #FFFFFF;
+  
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-hindi: var(--font-noto-devanagari), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* English Typography Rules */
+html[lang="en"] {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+}
+html[lang="en"] body {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+/* Hindi Typography Rules */
+html[lang="hi"] {
+  font-family: var(--font-noto-devanagari), sans-serif;
+}
+html[lang="hi"] body {
+  font-family: var(--font-noto-devanagari), sans-serif;
+  line-height: 1.75;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Utilities */
+.text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.text-shadow-md {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Scrollbar Utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
