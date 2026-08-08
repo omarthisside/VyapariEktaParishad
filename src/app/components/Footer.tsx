@@ -5,6 +5,8 @@ import Logo from "./Logo";
 import { Phone, ArrowUp } from "lucide-react";
 
 interface FooterProps {
+  lang: "en" | "hi";
+  setLang: (lang: "en" | "hi") => void;
   labels: {
     home: string;
     about: string;
@@ -19,7 +21,7 @@ interface FooterProps {
   };
 }
 
-export default function Footer({ labels }: FooterProps) {
+export default function Footer({ lang, setLang, labels }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const handleScrollTop = () => {
@@ -96,8 +98,34 @@ export default function Footer({ labels }: FooterProps) {
           <p className="tracking-wide">
             © 2023–{currentYear} Vyapari Ekta Parishad (V.E.P.). All Rights Reserved.
           </p>
-          <div className="flex items-center gap-4 mt-4 sm:mt-0">
+          <div className="flex items-center gap-4 mt-4 sm:mt-0 flex-wrap justify-center sm:justify-end">
+            {/* Footer Language Switcher */}
+            <div className="flex items-center bg-white/5 rounded-full p-0.5 border border-white/10 select-none">
+              <button
+                onClick={() => setLang("en")}
+                className={`px-2.5 py-0.5 text-[9px] font-black rounded-full transition-all cursor-pointer uppercase ${
+                  lang === "en"
+                    ? "bg-[#E81D25] text-white shadow-sm"
+                    : "text-[#ECE9DE]/60 hover:text-white"
+                }`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => setLang("hi")}
+                className={`px-2.5 py-0.5 text-[9px] font-black rounded-full transition-all cursor-pointer ${
+                  lang === "hi"
+                    ? "bg-[#E81D25] text-white shadow-sm"
+                    : "text-[#ECE9DE]/60 hover:text-white"
+                }`}
+              >
+                हिन्दी
+              </button>
+            </div>
+
+            <span className="text-[#ECE9DE]/20 select-none">|</span>
             <span>Region: Uttar Pradesh, India</span>
+            <span className="text-[#ECE9DE]/40 select-none">|</span>
             <button
               onClick={handleScrollTop}
               className="flex items-center gap-1 hover:text-white transition-colors uppercase tracking-wider select-none cursor-pointer"

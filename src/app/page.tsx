@@ -91,8 +91,6 @@ export default function Home() {
 
         {/* Sticky Navigation Header */}
         <Header
-          lang={lang}
-          setLang={setLang}
           onJoinClick={handleJoinClick}
           labels={currentText.nav}
         />
@@ -110,7 +108,7 @@ export default function Home() {
         />
         
         {/* Footer Sitemap */}
-        <Footer labels={currentText.nav} />
+        <Footer lang={lang} setLang={setLang} labels={currentText.nav} />
       </div>
     );
   }
@@ -122,8 +120,6 @@ export default function Home() {
 
       {/* Sticky Navigation Header */}
       <Header
-        lang={lang}
-        setLang={setLang}
         onJoinClick={handleJoinClick}
         labels={currentText.nav}
       />
@@ -171,7 +167,7 @@ export default function Home() {
       </div>
 
       {/* Footer Sitemap */}
-      <Footer labels={currentText.nav} />
+      <Footer lang={lang} setLang={setLang} labels={currentText.nav} />
     </div>
   );
 }
