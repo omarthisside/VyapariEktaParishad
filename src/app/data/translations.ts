@@ -93,6 +93,8 @@ export interface TranslationContent {
     whatsappBtn: string;
     callBtn: string;
     followUs: string;
+    addressLabel: string;
+    addressVal: string;
   };
   form: {
     title: string;
@@ -322,11 +324,13 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
       btnContact: "Contact Us"
     },
     contactSection: {
-      heading: "Get in Touch",
-      presidentTitle: "State President & Founder",
+      heading: "Contact Office Bearers",
+      presidentTitle: "Central Office of State President",
       whatsappBtn: "WhatsApp Us",
-      callBtn: "Call Now",
-      followUs: "Follow Us"
+      callBtn: "Call Helpline",
+      followUs: "Follow Our Socials",
+      addressLabel: "Address",
+      addressVal: "Near DAV School, Vidurkuti Road, Bukhara, Bijnor - 246808"
     },
     form: {
       title: "Raise Your Issue / Register",
@@ -554,11 +558,13 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
       btnContact: "हमसे संपर्क करें"
     },
     contactSection: {
-      heading: "हमसे संपर्क करें",
-      presidentTitle: "प्रदेश अध्यक्ष एवं संस्थापक",
+      heading: "पदाधिकारियों से संपर्क करें",
+      presidentTitle: "प्रदेश अध्यक्ष का केंद्रीय कार्यालय",
       whatsappBtn: "व्हाट्सएप करें",
-      callBtn: "अभी कॉल करें",
-      followUs: "हमसे जुड़ें"
+      callBtn: "हेल्पलाइन पर कॉल करें",
+      followUs: "सोशल मीडिया पर जुड़ें",
+      addressLabel: "पता",
+      addressVal: "निकट डी.ए.वी. स्कूल, विदुरकुटी रोड, बुखारा, बिजनौर - 246808"
     },
     form: {
       title: "समस्या दर्ज करें / पंजीकरण",

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Phone, MessageSquare, ShieldCheck } from "lucide-react";
+import { Phone, MessageSquare, ShieldCheck, MapPin } from "lucide-react";
 
 interface ContactProps {
   labels: {
@@ -10,6 +10,8 @@ interface ContactProps {
     whatsappBtn: string;
     callBtn: string;
     followUs: string;
+    addressLabel: string;
+    addressVal: string;
   };
 }
 
@@ -117,6 +119,21 @@ export default function Contact({ labels }: ContactProps) {
                   >
                     7669090008
                   </a>
+                </div>
+              </div>
+
+              {/* Address Details */}
+              <div className="mt-6 pt-6 border-t border-[#8B312B]/10 space-y-2">
+                <div className="flex items-start gap-3">
+                  <MapPin className="h-4.5 w-4.5 text-[#E81D25] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="block text-[10px] text-slate-400 uppercase tracking-widest font-extrabold">
+                      {labels.addressLabel}
+                    </span>
+                    <span className="text-xs font-semibold text-[#1F1D1C]/90 leading-relaxed block mt-0.5">
+                      {labels.addressVal}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
