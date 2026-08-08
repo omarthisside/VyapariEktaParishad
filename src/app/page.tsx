@@ -131,7 +131,6 @@ export default function Home() {
       {/* Hero section */}
       <Hero
         onJoinClick={handleJoinClick}
-        onRaiseIssueClick={scrollToContact}
         labels={currentText.hero}
       />
 

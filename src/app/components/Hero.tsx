@@ -6,7 +6,6 @@ import { Sparkles, ArrowRight, AlertTriangle } from "lucide-react";
 
 interface HeroProps {
   onJoinClick: () => void;
-  onRaiseIssueClick: () => void;
   labels: {
     titleSpan1: string;
     titleSpan2: string;
@@ -15,11 +14,10 @@ interface HeroProps {
     copy: string;
     trustStatement: string;
     primaryCta: string;
-    secondaryCta: string;
   };
 }
 
-export default function Hero({ onJoinClick, onRaiseIssueClick, labels }: HeroProps) {
+export default function Hero({ onJoinClick, labels }: HeroProps) {
   return (
     <section id="home" className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28 lg:pb-36 bg-[#ECE9DE]">
       {/* Visual background accents representing the fist/strength motif (subtle grids and shapes) */}
@@ -31,9 +29,35 @@ export default function Hero({ onJoinClick, onRaiseIssueClick, labels }: HeroPro
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-4xl mx-auto flex flex-col items-center">
-          {/* Centered Large V.E.P. Logo */}
-          <div className="mb-6 transform hover:scale-105 transition-transform duration-300">
-            <Logo size={200} showText={false} />
+          {/* Centered Large V.E.P. Logo with Indian Flag Badge Element */}
+          <div className="mb-6 relative group flex justify-center">
+            <div className="relative transform hover:scale-105 transition-transform duration-300">
+              <Logo size={200} showText={false} />
+              
+              {/* Floating Indian Flag Badge Element */}
+              <div className="absolute -bottom-1 -right-1 flex flex-col w-12 h-8 rounded border-2 border-white shadow-md overflow-hidden rotate-6 hover:rotate-0 transition-all duration-200 select-none">
+                <div className="bg-[#FF671F] flex-1" />
+                <div className="bg-white flex-1 flex items-center justify-center relative">
+                  <div className="w-2.5 h-2.5 rounded-full border border-[#000080] flex items-center justify-center relative">
+                    {/* Spokes */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-[0.5px] h-full bg-[#000080]/30 transform rotate-0" />
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-[0.5px] h-full bg-[#000080]/30 transform rotate-45" />
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-[0.5px] h-full bg-[#000080]/30 transform rotate-90" />
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-[0.5px] h-full bg-[#000080]/30 transform rotate-135" />
+                    </div>
+                    <div className="w-0.75 h-0.75 rounded-full bg-[#000080]" />
+                  </div>
+                </div>
+                <div className="bg-[#128807] flex-1" />
+              </div>
+            </div>
           </div>
 
           {/* Secondary Headline (Organization Name) */}
@@ -61,14 +85,6 @@ export default function Hero({ onJoinClick, onRaiseIssueClick, labels }: HeroPro
             >
               {labels.primaryCta}
               <ArrowRight className="h-4.5 w-4.5" />
-            </button>
-            
-            <button
-              onClick={onRaiseIssueClick}
-              className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-lg bg-white border-2 border-[#8B312B]/40 hover:border-[#E81D25] text-[#8B312B] hover:text-[#E81D25] px-8 py-3.5 text-sm font-black uppercase tracking-wider transition-all duration-200 cursor-pointer"
-            >
-              <AlertTriangle className="h-4.5 w-4.5" />
-              {labels.secondaryCta}
             </button>
           </div>
 

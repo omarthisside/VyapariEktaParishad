@@ -10,10 +10,9 @@ interface AnnouncementBannerProps {
 export default function AnnouncementBanner({ lang }: AnnouncementBannerProps) {
   const btnText = lang === "hi" ? "चैनल से जुड़ें" : "Join Channel";
   
-  // Prefilled double scroll text to allow seamless infinite loop
   const scrollText = lang === "hi" 
-    ? "📢 व्यापारी एकता परिषद के आधिकारिक व्हाट्सएप चैनल से जुड़कर नवीनतम समाचार, कर सुधार और व्यापारियों की सुरक्षा से जुड़े सभी अपडेट तुरंत प्राप्त करें! • Join the official Vyapari Ekta Parishad WhatsApp Channel to get instant updates on tax compliances, merchant security, and latest news! • "
-    : "📢 Join the official Vyapari Ekta Parishad WhatsApp Channel to get instant updates on tax compliances, merchant security, and latest news! • व्यापारी एकता परिषद के आधिकारिक व्हाट्सएप चैनल से जुड़कर नवीनतम समाचार, कर सुधार और व्यापारियों की सुरक्षा से जुड़े सभी अपडेट तुरंत प्राप्त करें! • ";
+    ? "🇮🇳 विशाल तिरंगा यात्रा | 15 अगस्त | प्रातः 10:00 बजे | बिजनौर — स्वतंत्रता दिवस के पावन पर्व पर व्यापारी एकता परिषद द्वारा आयोजित | प्रारंभ स्थल: श्री शमशाद अंसारी जी का कैंप कार्यालय | आइए मिलकर तिरंगा लहराएं और गर्व से कहें — हम भारतीय हैं! 🇮🇳 • 🇮🇳 Grand Tiranga Yatra | 15th August | 10:00 AM | Bijnor — Organized by Vyapari Ekta Parishad on the occasion of Independence Day | Starting Point: Camp Office of Shri Shamshad Ansari Ji | Let's raise the tricolor together and say with pride — We are Indians! 🇮🇳 • "
+    : "🇮🇳 Grand Tiranga Yatra | 15th August | 10:00 AM | Bijnor — Organized by Vyapari Ekta Parishad on the occasion of Independence Day | Starting Point: Camp Office of Shri Shamshad Ansari Ji | Let's raise the tricolor together and say with pride — We are Indians! 🇮🇳 • 🇮🇳 विशाल तिरंगा यात्रा | 15 अगस्त | प्रातः 10:00 बजे | बिजनौर — स्वतंत्रता दिवस के पावन पर्व पर व्यापारी एकता परिषद द्वारा आयोजित | प्रारंभ स्थल: श्री शमशाद अंसारी जी का कैंप कार्यालय | आइए मिलकर तिरंगा लहराएं और गर्व से कहें — हम भारतीय हैं! 🇮🇳 • ";
 
   return (
     <div className="bg-[#E81D25] text-white h-11 flex items-center justify-between px-4 overflow-hidden border-b border-white/10 select-none relative z-50">
