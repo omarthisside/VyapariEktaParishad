@@ -102,17 +102,6 @@ export default function Leadership({ labels }: LeadershipProps) {
               <blockquote className="text-sm sm:text-base font-semibold text-[#1F1D1C]/80 leading-relaxed border-t border-[#8B312B]/15 pt-4">
                 {labels.statement}
               </blockquote>
-
-              {/* Direct links to contact office */}
-              <div className="pt-3 flex flex-wrap gap-4 justify-center md:justify-start">
-                <a
-                  href="tel:7669090008"
-                  className="inline-flex items-center gap-2 text-xs font-black text-[#8B312B] hover:text-[#E81D25] transition-colors"
-                >
-                  <Phone className="h-4 w-4 text-slate-400" />
-                  <span>Office Helpline: 7669090008</span>
-                </a>
-              </div>
             </div>
             
           </div>

@@ -8,7 +8,6 @@ interface ContactProps {
     heading: string;
     presidentTitle: string;
     whatsappBtn: string;
-    callBtn: string;
     addressLabel: string;
     addressVal: string;
   };
@@ -61,15 +60,6 @@ export default function Contact({ labels }: ContactProps) {
                   7669090008
                 </a>
               </div>
-              
-              <div className="flex items-center gap-3">
-                <span className="text-xs text-slate-400 uppercase tracking-widest w-16">
-                  Mobile:
-                </span>
-                <a href="tel:7669790008" className="hover:text-[#E81D25] transition-colors">
-                  7669790008
-                </a>
-              </div>
 
               <div className="flex items-center gap-3">
                 <span className="text-xs text-slate-400 uppercase tracking-widest w-16">
@@ -103,23 +93,15 @@ export default function Contact({ labels }: ContactProps) {
           </div>
 
           {/* Direct Quick Action Buttons */}
-          <div className="grid grid-cols-2 gap-4 pt-8 border-t border-[#8B312B]/10 mt-8">
+          <div className="pt-8 border-t border-[#8B312B]/10 mt-8">
             <a
               href="https://wa.me/917669090008"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white py-3 text-xs font-black uppercase tracking-wider shadow-sm transition-all duration-200"
+              className="flex items-center justify-center gap-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 px-6 text-xs font-black uppercase tracking-wider shadow-sm hover:shadow transition-all duration-200 w-full"
             >
-              <MessageSquare className="h-4 w-4" />
+              <MessageSquare className="h-4.5 w-4.5" />
               {labels.whatsappBtn}
-            </a>
-            
-            <a
-              href="tel:7669090008"
-              className="flex items-center justify-center gap-2 rounded-lg bg-[#E81D25] hover:bg-[#E81D25]/90 text-white py-3 text-xs font-black uppercase tracking-wider shadow-sm transition-all duration-200"
-            >
-              <Phone className="h-4 w-4" />
-              {labels.callBtn}
             </a>
           </div>
 

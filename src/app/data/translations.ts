@@ -91,7 +91,6 @@ export interface TranslationContent {
     heading: string;
     presidentTitle: string;
     whatsappBtn: string;
-    callBtn: string;
     addressLabel: string;
     addressVal: string;
   };
@@ -326,7 +325,6 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
       heading: "Contact Office Bearers",
       presidentTitle: "Central Office of State President",
       whatsappBtn: "WhatsApp Us",
-      callBtn: "Call Helpline",
       addressLabel: "Address",
       addressVal: "Near DAV School, Vidurkuti Road, Bukhara, Bijnor - 246808"
     },
@@ -559,7 +557,6 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
       heading: "पदाधिकारियों से संपर्क करें",
       presidentTitle: "प्रदेश अध्यक्ष का केंद्रीय कार्यालय",
       whatsappBtn: "व्हाट्सएप करें",
-      callBtn: "हेल्पलाइन पर कॉल करें",
       addressLabel: "पता",
       addressVal: "निकट डी.ए.वी. स्कूल, विदुरकुटी रोड, बुखारा, बिजनौर - 246808"
     },

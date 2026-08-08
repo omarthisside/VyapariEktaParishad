@@ -87,12 +87,6 @@ export default function Footer({ labels }: FooterProps) {
                   7669090008
                 </a>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-3.5 w-3.5 text-[#E81D25]" />
-                <a href="tel:7669790008" className="hover:text-white transition-colors">
-                  7669790008
-                </a>
-              </div>
             </div>
           </div>
         </div>
