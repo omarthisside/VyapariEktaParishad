@@ -11,7 +11,6 @@ import Leadership from "./components/Leadership";
 import Activities from "./components/Activities";
 import Gallery from "./components/Gallery";
 import JoinUs from "./components/JoinUs";
-import RegistrationForm from "./components/RegistrationForm";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { translations } from "./data/translations";
@@ -20,7 +19,6 @@ export default function Home() {
   const [lang, setLangState] = useState<"en" | "hi">("hi");
   const [mounted, setMounted] = useState(false);
 
-  const registerRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
   // Synchronize language state with localStorage, URL search params, and HTML element attributes
@@ -67,10 +65,6 @@ export default function Home() {
       : "Vyapari Ekta Parishad (V.E.P.) | Uttar Pradesh";
   }, [lang, mounted]);
 
-  const scrollToRegister = () => {
-    registerRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -99,7 +93,7 @@ export default function Home() {
       {/* Hero section */}
       <Hero
         onJoinClick={handleJoinClick}
-        onRaiseIssueClick={scrollToRegister}
+        onRaiseIssueClick={scrollToContact}
         labels={currentText.hero}
       />
 
@@ -124,19 +118,13 @@ export default function Home() {
       {/* Gallery Section */}
       <Gallery labels={currentText.gallery} />
 
-      {/* Registration Section */}
-      <div ref={registerRef} id="join">
-        {/* Banner */}
+      {/* Registration Banner Section */}
+      <div id="join">
         <JoinUs
           onJoinClick={handleJoinClick}
           onContactClick={scrollToContact}
           labels={currentText.joinSection}
         />
-        
-        {/* Form Container */}
-        <div className="py-20 bg-[#ECE9DE]/30 px-4 sm:px-6 lg:px-8 border-b border-[#8B312B]/10">
-          <RegistrationForm labels={currentText.form} />
-        </div>
       </div>
 
       {/* Contact Cards section */}
