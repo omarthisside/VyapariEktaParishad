@@ -11,6 +11,7 @@ interface Article {
   desc: string;
   content: string;
   image?: string;
+  images?: string[];
 }
 
 interface ArticleViewProps {
@@ -98,6 +99,30 @@ export default function ArticleView({ article, onClose, labels }: ArticleViewPro
               <p key={idx}>{p}</p>
             ))}
           </div>
+
+          {/* Article Gallery */}
+          {article.images && article.images.length > 0 && (
+            <div className="border-t border-[#8B312B]/15 pt-8 mt-8 space-y-4">
+              <h3 className="text-base font-black text-[#8B312B] uppercase tracking-wide">
+                Event Gallery / कार्यक्रम की झलकियां
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {article.images.map((imgUrl, idx) => (
+                  <div
+                    key={idx}
+                    className="relative aspect-[4/3] rounded-xl overflow-hidden border border-[#8B312B]/10 bg-slate-100 hover:shadow-md transition-all duration-200 group"
+                  >
+                    <Image
+                      src={imgUrl}
+                      alt={`${article.title} gallery ${idx + 1}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </article>
 
         {/* Bottom Back Button */}

@@ -83,6 +83,7 @@ export interface TranslationContent {
       desc: string;
       content: string;
       image?: string;
+      images?: string[];
     }>;
   };
   joinSection: {
@@ -307,7 +308,16 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
           title: "Vyapari Ekta Parishad Establishment Day",
           desc: "Vyapari Ekta Parishad celebrated its Establishment Day with a grand event attended by Cabinet Minister Shri Anil Kumar Ji, reaffirming its commitment to trader rights.",
           content: "Vyapari Ekta Parishad celebrated its Establishment Day with a grand and dignified program. The event was graced by the presence of Cabinet Minister Shri Anil Kumar Ji as the chief guest.\n\nOn this occasion, in-depth discussions were held on crucial matters concerning traders in the state and local regions, their grievances, and strategies to strengthen trader interests. A solemn resolution was taken to effectively raise the voice of merchants before the administration and carry out a continuous struggle for their rights.\n\nDuring the program, special emphasis was laid on carrying out initiatives to make merchants aware of various welfare and business-friendly policies run by the government and helping eligible traders benefit from these schemes.\n\nThe goal of Vyapari Ekta Parishad is not only to bring traders onto a single platform but to stand firmly and work for the respect, rights, security, and growth of every trader. On this Establishment Day, the Parishad reaffirmed its vow to remain active in defending merchants' interests and resolving their challenges.",
-          image: "/establishment-day.png"
+          image: "/articles/article1/1.png",
+          images: [
+            "/articles/article1/1.png",
+            "/articles/article1/2.png",
+            "/articles/article1/3.png",
+            "/articles/article1/4.png",
+            "/articles/article1/5.png",
+            "/articles/article1/5-1.png",
+            "/articles/article1/6.png"
+          ]
         }
       ]
     },
@@ -531,7 +541,16 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
           title: "व्यापारी एकता परिषद का स्थापना दिवस",
           desc: "व्यापारी एकता परिषद द्वारा स्थापना दिवस के अवसर पर एक भव्य एवं गरिमापूर्ण कार्यक्रम का आयोजन किया गया। कार्यक्रम में कैबिनेट मंत्री श्री अनिल कुमार जी की गरिमामयी उपस्थिति रही।",
           content: "व्यापारी एकता परिषद द्वारा स्थापना दिवस के अवसर पर एक भव्य एवं गरिमापूर्ण कार्यक्रम का आयोजन किया गया। कार्यक्रम में कैबिनेट मंत्री श्री अनिल कुमार जी की गरिमामयी उपस्थिति रही।\n\nइस अवसर पर प्रदेश एवं क्षेत्र के व्यापारियों से जुड़े महत्वपूर्ण विषयों, उनकी समस्याओं तथा व्यापारी हितों की मजबूती को लेकर विस्तृत चर्चा की गई। व्यापारियों की आवाज़ को शासन-प्रशासन तक प्रभावी ढंग से पहुँचाने और उनके अधिकारों के लिए निरंतर संघर्ष करने का संकल्प लिया गया।\n\nकार्यक्रम के दौरान सरकार द्वारा व्यापारियों के लिए संचालित विभिन्न जनकल्याणकारी एवं व्यापारी हितैषी योजनाओं की जानकारी व्यापारियों तक पहुँचाने तथा पात्र व्यापारियों को इन योजनाओं का लाभ दिलाने के लिए विशेष पहल करने पर जोर दिया गया।\n\nव्यापारी एकता परिषद का उद्देश्य केवल व्यापारियों को एक मंच पर लाना ही नहीं, बल्कि हर व्यापारी के सम्मान, अधिकार, सुरक्षा और विकास के लिए मजबूती से कार्य करना है। स्थापना दिवस के अवसर पर परिषद ने व्यापारियों के हितों की रक्षा तथा उनकी समस्याओं के समाधान के लिए निरंतर सक्रिय रहने का संकल्प दोहराया।",
-          image: "/establishment-day.png"
+          image: "/articles/article1/1.png",
+          images: [
+            "/articles/article1/1.png",
+            "/articles/article1/2.png",
+            "/articles/article1/3.png",
+            "/articles/article1/4.png",
+            "/articles/article1/5.png",
+            "/articles/article1/5-1.png",
+            "/articles/article1/6.png"
+          ]
         }
       ]
     },
