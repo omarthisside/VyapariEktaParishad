@@ -64,11 +64,11 @@ export interface TranslationContent {
     showMembers: string;
     hideMembers: string;
     teams: {
-      pradesh: { title: string; members: Array<{ name: string; role: string; desc: string }> };
-      mandal: { title: string; members: Array<{ name: string; role: string; desc: string }> };
-      zila: { title: string; members: Array<{ name: string; role: string; desc: string }> };
-      nagar: { title: string; members: Array<{ name: string; role: string; desc: string }> };
-      yuva: { title: string; members: Array<{ name: string; role: string; desc: string }> };
+      pradesh: { title: string; members: Array<{ name: string; role: string; desc: string; image?: string }> };
+      mandal: { title: string; members: Array<{ name: string; role: string; desc: string; image?: string }> };
+      zila: { title: string; members: Array<{ name: string; role: string; desc: string; image?: string }> };
+      nagar: { title: string; members: Array<{ name: string; role: string; desc: string; image?: string }> };
+      yuva: { title: string; members: Array<{ name: string; role: string; desc: string; image?: string }> };
     };
   };
   activities: {
@@ -257,7 +257,7 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
         mandal: {
           title: "Divisional Committee (Mandal Team)",
           members: [
-            { name: "Mohd Kashif", role: "Mandal In-charge", desc: "" },
+            { name: "Mohd Kashif", role: "Mandal In-charge", desc: "", image: "/members/mohd-kashif.png" },
             { name: "Mohd Pasha", role: "Mandal President", desc: "" },
             { name: "Azhar Bukhari", role: "Mandal Vice President", desc: "" },
             { name: "Ragib Farooqui", role: "Mandal Vice President", desc: "" }
@@ -489,7 +489,7 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
         mandal: {
           title: "मंडल कार्यकारिणी (Mandal Team)",
           members: [
-            { name: "मोहम्मद काशिफ", role: "मंडल प्रभारी", desc: "" },
+            { name: "मोहम्मद काशिफ", role: "मंडल प्रभारी", desc: "", image: "/members/mohd-kashif.png" },
             { name: "मोहम्मद पाशा", role: "मंडल अध्यक्ष", desc: "" },
             { name: "अजहर बुखारी", role: "मंडल उपाध्यक्ष", desc: "" },
             { name: "रागिब फारूकी", role: "मंडल उपाध्यक्ष", desc: "" }

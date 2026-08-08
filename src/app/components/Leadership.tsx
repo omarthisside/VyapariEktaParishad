@@ -8,6 +8,7 @@ interface TeamMember {
   name: string;
   role: string;
   desc: string;
+  image?: string;
 }
 
 interface TeamSection {
@@ -144,9 +145,18 @@ export default function Leadership({ labels }: LeadershipProps) {
                         className="bg-white border border-[#8B312B]/10 rounded-2xl p-5 flex flex-col items-center justify-between text-center hover:shadow-md transition-shadow duration-300 min-h-[220px]"
                       >
                         <div className="flex flex-col items-center w-full">
-                          {/* Space for Image (Placeholder) */}
-                          <div className="w-16 h-16 rounded-full bg-[#ECE9DE]/60 border border-[#8B312B]/15 flex items-center justify-center text-slate-400 mb-3 shadow-inner">
-                            <User className="h-7 w-7 text-[#8B312B]/40" />
+                          {/* Space for Image */}
+                          <div className="w-16 h-16 rounded-full bg-[#ECE9DE]/60 border border-[#8B312B]/15 flex items-center justify-center text-slate-400 mb-3 shadow-inner overflow-hidden relative">
+                            {member.image ? (
+                              <Image
+                                src={member.image}
+                                alt={member.name}
+                                fill
+                                className="object-cover"
+                              />
+                            ) : (
+                              <User className="h-7 w-7 text-[#8B312B]/40" />
+                            )}
                           </div>
                           
                           <h4 className="font-extrabold text-sm text-[#1F1D1C] leading-tight line-clamp-2">
