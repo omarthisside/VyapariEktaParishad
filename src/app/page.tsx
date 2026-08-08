@@ -75,6 +75,10 @@ export default function Home() {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleJoinClick = () => {
+    window.open("https://whatsapp.com/channel/0029Vb8ReUAAzNc3qf1GEm1T", "_blank", "noopener,noreferrer");
+  };
+
   if (!mounted) {
     // Return layout loading skeletal background in Cream to prevent server flash
     return <div className="min-h-screen bg-[#ECE9DE]" />;
@@ -88,13 +92,13 @@ export default function Home() {
       <Header
         lang={lang}
         setLang={setLang}
-        onJoinClick={scrollToRegister}
+        onJoinClick={handleJoinClick}
         labels={currentText.nav}
       />
 
       {/* Hero section */}
       <Hero
-        onJoinClick={scrollToRegister}
+        onJoinClick={handleJoinClick}
         onRaiseIssueClick={scrollToRegister}
         labels={currentText.hero}
       />
@@ -124,7 +128,7 @@ export default function Home() {
       <div ref={registerRef} id="join">
         {/* Banner */}
         <JoinUs
-          onJoinClick={scrollToRegister}
+          onJoinClick={handleJoinClick}
           onContactClick={scrollToContact}
           labels={currentText.joinSection}
         />
