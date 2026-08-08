@@ -40,7 +40,6 @@ export default function Header({ onJoinClick, labels }: HeaderProps) {
     { name: labels.members, href: "#leadership" },
     { name: labels.activities, href: "#activities" },
     { name: labels.gallery, href: "#gallery" },
-    { name: labels.contact, href: "#contact" },
   ];
 
   return (
@@ -58,18 +57,30 @@ export default function Header({ onJoinClick, labels }: HeaderProps) {
             <Logo size={46} />
           </a>
 
-          {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-6">
-            {menuItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-[13px] font-extrabold tracking-wider uppercase text-[#1F1D1C] hover:text-[#E81D25] transition-colors duration-200"
-              >
-                {item.name}
-              </a>
-            ))}
-          </nav>
+          {/* Desktop Nav & CTA */}
+          <div className="hidden xl:flex items-center gap-8">
+            <nav className="flex items-center gap-6">
+              {menuItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-[13px] font-extrabold tracking-wider uppercase text-[#1F1D1C] hover:text-[#E81D25] transition-colors duration-200"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </nav>
+
+            {/* Join Parishad CTA Button */}
+            <a
+              href="https://whatsapp.com/channel/0029Vb8ReUAAzNc3qf1GEm1T"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg bg-[#E81D25] hover:bg-[#E81D25]/90 text-white px-5 py-2.5 text-xs font-black uppercase tracking-wider shadow-sm hover:shadow transition-all duration-200 cursor-pointer"
+            >
+              {labels.joinCta}
+            </a>
+          </div>
 
           {/* Mobile menu block */}
           <div className="flex items-center gap-3 xl:hidden">
@@ -98,6 +109,17 @@ export default function Header({ onJoinClick, labels }: HeaderProps) {
                 {item.name}
               </a>
             ))}
+
+            {/* Join Parishad Mobile Link */}
+            <a
+              href="https://whatsapp.com/channel/0029Vb8ReUAAzNc3qf1GEm1T"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="block rounded-lg bg-[#E81D25] text-white px-4 py-3 text-center text-sm font-extrabold uppercase tracking-wide hover:bg-[#E81D25]/90 transition-all mt-4"
+            >
+              {labels.joinCta}
+            </a>
           </nav>
         </div>
       )}

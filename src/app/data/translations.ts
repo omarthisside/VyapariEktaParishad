@@ -252,10 +252,10 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
         pradesh: {
           title: "State Executive Committee (Pradesh Team)",
           members: [
-            { name: "Rajeev Verma", role: "State Treasurer", desc: "Civil Engineer" },
-            { name: "Devesh Chaudhary", role: "State General Secretary", desc: "Medical Supplier" },
-            { name: "MP Singh", role: "State Patron", desc: "Hospital Director" },
-            { name: "Shamshad Ansari", role: "State Vice President", desc: "Vegetable & Fruit Wholesaler" },
+            { name: "Rajeev Verma", role: "State Treasurer", desc: "Civil Engineer", image: "/members/rajeev-pradesh.png" },
+            { name: "Devesh Chaudhary", role: "State General Secretary", desc: "Medical Supplier", image: "/members/divesh-chaudhary.png" },
+            { name: "MP Singh", role: "State Patron", desc: "Hospital Director", image: "/members/mp-singh.png" },
+            { name: "Shamshad Ansari", role: "State Vice President", desc: "Vegetable & Fruit Wholesaler", image: "/members/shamshad-ansari.png" },
             { name: "Chaudhary Charan Singh", role: "State Spokesperson", desc: "Bullion / Sarrafa Merchant" }
           ]
         },
@@ -264,26 +264,26 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
           members: [
             { name: "Er. Mohd Kashif", role: "Mandal In-charge", desc: "", image: "/members/mohd-kashif.png" },
             { name: "Mohd Pasha", role: "Mandal President", desc: "" },
-            { name: "Azhar Bukhari", role: "Mandal Vice President", desc: "" },
-            { name: "Ragib Farooqui", role: "Mandal Vice President", desc: "" }
+            { name: "Azhar Bukhari", role: "Mandal Vice President", desc: "", image: "/members/azhar-bukhari.png" },
+            { name: "Ragib Farooqui", role: "Mandal Vice President", desc: "", image: "/members/ragib-farooqui.png" }
           ]
         },
         zila: {
           title: "District Committee (Zila Team)",
           members: [
-            { name: "Anuj Manav Sharma", role: "District President", desc: "Restaurant Proprietor" },
-            { name: "Tariq Masood", role: "District In-charge", desc: "Medicine Vendor" },
-            { name: "Prashant Chaudhary", role: "District General Secretary", desc: "Building Material Supplier" },
-            { name: "Rajeev Kumar", role: "District Secretary", desc: "Restaurant Proprietor" },
+            { name: "Anuj Manav Sharma", role: "District President", desc: "Restaurant Proprietor", image: "/members/anujh-sharma.png" },
+            { name: "Tariq Masood", role: "District In-charge", desc: "Medicine Vendor", image: "/members/tariq-masood.png" },
+            { name: "Prashant Chaudhary", role: "District General Secretary", desc: "Building Material Supplier", image: "/members/prashant-chaudhary.png" },
+            { name: "Rajeev Kumar", role: "District Secretary", desc: "Restaurant Proprietor", image: "/members/rajeev-zila.png" },
             { name: "Faheem Ahmed", role: "District Vice President", desc: "Grocery Merchant" },
             { name: "Azeem Ahmed", role: "District Secretary", desc: "Grocery Merchant" },
-            { name: "Naeem Ahmed Ansari", role: "District President (Minority Cell)", desc: "" }
+            { name: "Naeem Ahmed Ansari", role: "District President (Minority Cell)", desc: "", image: "/members/naeem-ahmed.png" }
           ]
         },
         nagar: {
           title: "City Committee (Nagar Team)",
           members: [
-            { name: "Mustaqeem Ahmed", role: "City President", desc: "" },
+            { name: "Mustaqeem Ahmed", role: "City President", desc: "", image: "/members/mustaqeem-ahmed.png" },
             { name: "Ashish Gupta", role: "City General Secretary", desc: "" }
           ]
         },
@@ -291,7 +291,8 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
           title: "Youth Wing (Yuva Team)",
           members: [
             { name: "Vijay Mohan Gupta", role: "District President (Youth Wing)", desc: "" },
-            { name: "Maninder Singh", role: "District General Secretary (Youth Wing)", desc: "" }
+            { name: "Maninder Singh", role: "District General Secretary (Youth Wing)", desc: "" },
+            { name: "Junaid Rana", role: "Member (Youth Wing)", desc: "", image: "/members/junaid-rana.png" }
           ]
         }
       }
@@ -485,10 +486,10 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
         pradesh: {
           title: "प्रदेश कार्यकारिणी (Pradesh Team)",
           members: [
-            { name: "राजीव वर्मा", role: "प्रदेश कोषाध्यक्ष", desc: "सिविल इंजीनियर" },
-            { name: "देवेश चौधरी", role: "प्रदेश महामंत्री", desc: "मेडिकल सप्लायर" },
-            { name: "एमपी सिंह", role: "प्रदेश संरक्षक", desc: "अस्पताल संचालक" },
-            { name: "शमशाद अंसारी", role: "प्रदेश उपाध्यक्ष", desc: "सब्जी फल थोक विक्रेता" },
+            { name: "राजीव वर्मा", role: "प्रदेश कोषाध्यक्ष", desc: "सिविल इंजीनियर", image: "/members/rajeev-pradesh.png" },
+            { name: "देवेश चौधरी", role: "प्रदेश महामंत्री", desc: "मेडिकल सप्लायर", image: "/members/divesh-chaudhary.png" },
+            { name: "एमपी सिंह", role: "प्रदेश संरक्षक", desc: "अस्पताल संचालक", image: "/members/mp-singh.png" },
+            { name: "शमशाद अंसारी", role: "प्रदेश उपाध्यक्ष", desc: "सब्जी फल थोक विक्रेता", image: "/members/shamshad-ansari.png" },
             { name: "चौधरी चरण सिंह", role: "प्रदेश प्रवक्ता", desc: "सर्राफा व्यापारी" }
           ]
         },
@@ -497,26 +498,26 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
           members: [
             { name: "इंजी. मोहम्मद काशिफ", role: "मंडल प्रभारी", desc: "", image: "/members/mohd-kashif.png" },
             { name: "मोहम्मद पाशा", role: "मंडल अध्यक्ष", desc: "" },
-            { name: "अजहर बुखारी", role: "मंडल उपाध्यक्ष", desc: "" },
-            { name: "रागिब फारूकी", role: "मंडल उपाध्यक्ष", desc: "" }
+            { name: "अजहर बुखारी", role: "मंडल उपाध्यक्ष", desc: "", image: "/members/azhar-bukhari.png" },
+            { name: "रागिब फारूकी", role: "मंडल उपाध्यक्ष", desc: "", image: "/members/ragib-farooqui.png" }
           ]
         },
         zila: {
           title: "जिला कार्यकारिणी (Zila Team)",
           members: [
-            { name: "अनुज मानव शर्मा", role: "जिला अध्यक्ष", desc: "रेस्टोरेंट संचालक" },
-            { name: "तारिक मसूद", role: "जिला प्रभारी", desc: "दवाई विक्रेता" },
-            { name: "प्रशांत चौधरी", role: "जिला महामंत्री", desc: "बिल्डिंग मटेरियल सप्लायर" },
-            { name: "राजीव कुमार", role: "जिला मंत्री", desc: "रेस्टोरेंट संचालक" },
+            { name: "अनुज मानव शर्मा", role: "जिला अध्यक्ष", desc: "रेस्टोरेंट संचालक", image: "/members/anujh-sharma.png" },
+            { name: "तारिक मसूद", role: "जिला प्रभारी", desc: "दवाई विक्रेता", image: "/members/tariq-masood.png" },
+            { name: "प्रशांत चौधरी", role: "जिला महामंत्री", desc: "बिल्डिंग मटेरियल सप्लायर", image: "/members/prashant-chaudhary.png" },
+            { name: "राजीव कुमार", role: "जिला मंत्री", desc: "रेस्टोरेंट संचालक", image: "/members/rajeev-zila.png" },
             { name: "फहीम अहमद", role: "जिला उपाध्यक्ष", desc: "किराना व्यापारी" },
             { name: "अजीम अहमद", role: "जिला मंत्री", desc: "किराना व्यापारी" },
-            { name: "नईम अहमद अंसारी", role: "जिला अध्यक्ष (अल्पसंख्यक प्रकोष्ठ)", desc: "" }
+            { name: "नईम अहमद अंसारी", role: "जिला अध्यक्ष (अल्पसंख्यक प्रकोष्ठ)", desc: "", image: "/members/naeem-ahmed.png" }
           ]
         },
         nagar: {
           title: "नगर कार्यकारिणी (Nagar Team)",
           members: [
-            { name: "मुस्तकीम अहमद", role: "नगर अध्यक्ष", desc: "" },
+            { name: "मुस्तकीम अहमद", role: "नगर अध्यक्ष", desc: "", image: "/members/mustaqeem-ahmed.png" },
             { name: "आशीष गुप्ता", role: "नगर महामंत्री", desc: "" }
           ]
         },
@@ -524,7 +525,8 @@ export const translations: Record<"en" | "hi", TranslationContent> = {
           title: "युवा मोर्चा (Yuva Team)",
           members: [
             { name: "विजय मोहन गुप्ता", role: "जिला अध्यक्ष (युवा मोर्चा)", desc: "" },
-            { name: "मनिंदर सिंह", role: "जिला महामंत्री (युवा मोर्चा)", desc: "" }
+            { name: "मनिंदर सिंह", role: "जिला महामंत्री (युवा मोर्चा)", desc: "" },
+            { name: "जुनैद राणा", role: "सदस्य (युवा मोर्चा)", desc: "", image: "/members/junaid-rana.png" }
           ]
         }
       }
